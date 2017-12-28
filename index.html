@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>日考试</title>
+</head>
+<body>
+	<script>
+		function A(str){
+			var wrap = document.createElement("div");
+			var text = document.createElement("span");
+			var firstStr = str.slice(0,10);
+			var nextStr = str.substr(10,4);
+			text.style.color="red";
+			text.innerHTML = nextStr;
+			wrap.innerHTML = firstStr;
+			wrap.appendChild(text);
+			wrap.innerHTML += "****";
+			document.body.appendChild(wrap);
+			return str.length;
+		}
+		console.log(A("131121199901310259"));
+	</script>
+</body>
+</html>
